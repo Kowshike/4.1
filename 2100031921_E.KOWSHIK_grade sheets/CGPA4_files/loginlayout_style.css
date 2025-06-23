@@ -1,0 +1,49 @@
+
+
+#loginlayout_wrapper{
+    /*width: 100%;*/
+    /* max-width: 1750px; */
+    /*margin-top: 10px ! important;*/
+    /*background: #e2d2bf ! important;*/
+
+}
+
+#loginlayout_header{
+    background-color:#e2d2bf ! important;
+    height:auto ! important;
+   border-top:2px solid #a51c24;
+}
+
+
+#loginlayout_content{
+    background-color:#e2d2bf ! important;
+    padding-top:5px;
+    padding-bottom:5px;
+    height:auto;
+    overflow:auto;
+}
+
+#loginlayout_footer .login_footer{
+    background-color:#3a454b ! important;
+    height:auto ! important;
+    color:white ! important;
+    border-top:4px solid #a51c24;
+
+}
+
+
+.navbar-default {
+
+    background-color:#a51c24 ! important;
+
+    border-color: #a51c24 ! important;
+
+}
+.navbar {
+
+    border-radius: 0 ! important;
+
+}
+.navbar-default .navbar-nav > li > a{
+    color:#fff ! important;
+}

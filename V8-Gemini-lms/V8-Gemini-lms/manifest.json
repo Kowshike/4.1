@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "New Live Dark Theme LMCV 6",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting", "tabs","cookies"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "send-selected-text": {
+      "suggested_key": {
+        "default": "Alt+S"
+      },
+      "description": "Dark Theme"
+    }
+  }
+}

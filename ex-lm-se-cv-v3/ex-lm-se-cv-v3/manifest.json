@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Ex1 Dark Theme LM-SE-CV",
+  "version": "1.0",
+  "description": "Fetch and apply rules from an external URL",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "<all_urls>",
+    "https://softpage.live/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": []
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

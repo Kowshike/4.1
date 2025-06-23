@@ -1,0 +1,30 @@
+
+
+$(document).ready(function () {
+    $('.kv-toggle').click(function (event) {
+        event.preventDefault(); // cancel the event
+        $(this).children('.opened').toggle();
+        $(this).children('.closed').toggle();
+        $(this).parent().children('ul').toggle();
+        //$(this).parent().toggleClass('active');
+
+
+       // $(this).siblings().children(".nav-pills").slideUp();
+
+        $(this).parent().siblings().children("ul").slideUp();
+
+        if ($(this).children("ul").css({"display":"none","background-color":"red ! important"}))
+
+
+        {
+            $(this).children("ul").slideDown();
+
+        }
+        else
+        {
+            $(this).children("ul").slideUp();
+            $(this).children('.closed').slideUp();
+        }
+
+    });
+});

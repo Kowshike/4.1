@@ -1,0 +1,10 @@
+.student-table td
+{
+    width:33%;
+}
+@media (max-width:768px) {
+    .student-table td
+    {
+        width:50%;
+    }
+}

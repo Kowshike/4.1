@@ -1,0 +1,459 @@
+﻿
+
+$(document).ready(function (e) {
+
+    "use strict";
+    isIntegeronly(e);
+    isNumber(e);
+    isNumberOnly(e);
+    isAlphabit(e);
+    isAlphabitgrade(e);
+    /*employee tabs and employee tabs content js code*/
+
+    if($(this).find("#current"))
+   {
+    $("#content").find("[id^='tab']").hide(); // Hide all content
+    $('#' +$(this).find("#current").children('a').attr('name')).fadeIn();
+
+   }
+
+    $('#tabs a').click(function (e) {
+        e.preventDefault();
+
+        if ($(this).closest("li").attr("id") == "current") { //detection for current tab
+            return;
+        }
+        else {
+            $("#content").find("[id^='tab']").hide(); // Hide all content
+            $("#tabs li").attr("id", ""); //Reset id's
+
+            $(this).parent().attr("id", "current"); // Activate this
+
+
+            $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
+        }
+    });
+
+
+    /*research  tabs and research tabs content js code*/
+
+    if($(this).find("#currentr"))
+    {
+
+        $("#research-content").find("[id^='rtab']").hide(); // Hide all content
+        $('#' +$(this).find("#currentr").children('a').attr('name')).fadeIn();
+
+    }
+
+    $('#tabs-research a').click(function (e) {
+        // alert("clicked reseqarch front");
+        e.preventDefault();
+
+        if ($(this).closest("li").attr("id") == "currentr") { //detection for current tab
+            return;
+        }
+        else {
+            $("#research-content").find("[id^='rtab']").hide(); // Hide all content
+            $("#tabs-research li").attr("id", ""); //Reset id's
+
+            $(this).parent().attr("id", "currentr"); // Activate this
+
+
+            $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
+        }
+    });
+
+
+
+    /*programs tabs and programs tabs content js code*/
+
+    if($(this).find("#current"))
+    {
+
+        $("#programs-content").find("[id^='progtab']").hide(); // Hide all content
+        $('#' +$(this).find("#current").children('a').attr('name')).fadeIn();
+
+    }
+
+
+    $('#programs-tabs a').click(function (e) {
+
+        // alert("clicked reseqarch front");
+        e.preventDefault();
+
+        if ($(this).closest("li").attr("id") == "current") { //detection for current tab
+            return;
+        }
+        else {
+            $("#programs-content").find("[id^='progtab']").hide(); // Hide all content
+            $("#programs-tabs li").attr("id", ""); //Reset id's
+
+            $(this).parent().attr("id", "current"); // Activate this
+
+
+            $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
+        }
+    });
+
+
+
+    /*courses tabs and courses content tabs code*/
+
+    if($(this).find("#current"))
+    {
+
+        $("#course-content").find("[id^='coursetab']").hide(); // Hide all content
+        $('#' +$(this).find("#current").children('a').attr('name')).fadeIn();
+
+    }
+
+
+    $('#course-tabs a').click(function (e) {
+
+        // alert("clicked reseqarch front");
+        e.preventDefault();
+
+        if ($(this).closest("li").attr("id") == "current") { //detection for current tab
+            return;
+        }
+        else {
+            $("#course-content").find("[id^='coursetab']").hide(); // Hide all content
+            $("#course-tabs li").attr("id", ""); //Reset id's
+
+            $(this).parent().attr("id", "current"); // Activate this
+
+
+            $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
+        }
+    });
+
+    /* coursehandout tabs and programs tabs content js code*/
+
+    if($(this).find("#current"))
+    {
+
+        $("#handout-content").find("[id^='handouttab']").hide(); // Hide all content
+        $('#' +$(this).find("#current").children('a').attr('name')).fadeIn();
+
+    }
+
+
+    $('#handout-tabs a').click(function (e) {
+
+        // alert("clicked reseqarch front");
+        e.preventDefault();
+
+        if ($(this).closest("li").attr("id") == "current") { //detection for current tab
+            return;
+        }
+        else {
+            $("#handout-content").find("[id^='handouttab']").hide(); // Hide all content
+            $("#handout-tabs li").attr("id", ""); //Reset id's
+
+            $(this).parent().attr("id", "current"); // Activate this
+
+
+            $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
+        }
+    });
+
+    /* qp tabs and programs tabs content js code*/
+
+    if($(this).find("#current"))
+    {
+
+        $("#qp-content").find("[id^='qptab']").hide(); // Hide all content
+        $('#' +$(this).find("#current").children('a').attr('name')).fadeIn();
+
+    }
+
+
+    $('#qp-tabs a').click(function (e) {
+
+        // alert("clicked reseqarch front");
+        e.preventDefault();
+
+        if ($(this).closest("li").attr("id") == "current") { //detection for current tab
+            return;
+        }
+        else {
+            $("#qp-content").find("[id^='qptab']").hide(); // Hide all content
+            $("#qp-tabs li").attr("id", ""); //Reset id's
+
+            $(this).parent().attr("id", "current"); // Activate this
+
+
+            $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
+        }
+    });
+
+    /* marks tabs and programs tabs content js code*/
+
+    if($(this).find("#current"))
+    {
+
+        $("#marks-content").find("[id^='markstab']").hide(); // Hide all content
+        $('#' +$(this).find("#current").children('a').attr('name')).fadeIn();
+
+    }
+
+
+    $('#marks-tabs a').click(function (e) {
+
+        // alert("clicked reseqarch front");
+        e.preventDefault();
+
+        if ($(this).closest("li").attr("id") == "current") { //detection for current tab
+            return;
+        }
+        else {
+            $("#marks-content").find("[id^='markstab']").hide(); // Hide all content
+            $("#marks-tabs li").attr("id", ""); //Reset id's
+
+            $(this).parent().attr("id", "current"); // Activate this
+
+
+            $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
+        }
+    });
+
+    /* course obe tabs and programs tabs content js code*/
+
+    if($(this).find("#current"))
+    {
+
+        $("#courseobe-content").find("[id^='courseobetab']").hide(); // Hide all content
+        $('#' +$(this).find("#current").children('a').attr('name')).fadeIn();
+
+    }
+
+
+    $('#courseobe-tabs a').click(function (e) {
+
+        // alert("clicked reseqarch front");
+        e.preventDefault();
+
+        if ($(this).closest("li").attr("id") == "current") { //detection for current tab
+            return;
+        }
+        else {
+            $("#courseobe-content").find("[id^='courseobetab']").hide(); // Hide all content
+            $("#courseobe-tabs li").attr("id", ""); //Reset id's
+
+            $(this).parent().attr("id", "current"); // Activate this
+
+
+            $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
+        }
+    });
+
+    /* transport tabs and programs tabs content js code*/
+
+    if($(this).find("#current"))
+    {
+
+        $("#transport-content").find("[id^='transporttab']").hide(); // Hide all content
+        $('#' +$(this).find("#current").children('a').attr('name')).fadeIn();
+
+    }
+
+
+    $('#transport-tabs a').click(function (e) {
+
+        // alert("clicked reseqarch front");
+        e.preventDefault();
+
+        if ($(this).closest("li").attr("id") == "current")
+        { //detection for current tab
+            return;
+        }
+        else {
+            $("#transport-content").find("[id^='transporttab']").hide(); // Hide all content
+            $("#transport-tabs li").attr("id", ""); //Reset id's
+
+            $(this).parent().attr("id", "current"); // Activate this
+
+
+            $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
+        }
+    });
+
+
+
+
+    /*hostel tabs and programs tabs content js code*/
+
+    if($(this).find("#current"))
+    {
+
+        $("#hostel-content").find("[id^='hosteltab']").hide(); // Hide all content
+        $('#' +$(this).find("#current").children('a').attr('name')).fadeIn();
+
+    }
+
+
+    $('#hostel-tabs a').click(function (e) {
+
+        // alert("clicked reseqarch front");
+        e.preventDefault();
+
+        if ($(this).closest("li").attr("id") == "current") { //detection for current tab
+            return;
+        }
+        else {
+            $("#hostel-content").find("[id^='hosteltab']").hide(); // Hide all content
+            $("#hostel-tabs li").attr("id", ""); //Reset id's
+
+            $(this).parent().attr("id", "current"); // Activate this
+
+
+            $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
+        }
+    });
+
+
+
+    /*leave management tabs and programs tabs content js code*/
+
+    if($(this).find("#current"))
+    {
+
+        $("#leave-content").find("[id^='leavetab']").hide(); // Hide all content
+        $('#' +$(this).find("#current").children('a').attr('name')).fadeIn();
+
+    }
+
+
+    $('#leave-tabs a').click(function (e) {
+
+        // alert("clicked reseqarch front");
+        e.preventDefault();
+
+        if ($(this).closest("li").attr("id") == "current") { //detection for current tab
+            return;
+        }
+        else {
+            $("#leave-content").find("[id^='leavetab']").hide(); // Hide all content
+            $("#leave-tabs li").attr("id", ""); //Reset id's
+
+            $(this).parent().attr("id", "current"); // Activate this
+
+
+            $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
+        }
+    });
+
+
+
+
+    if($(this).find("#current"))
+    {
+
+        $("#courseprog-content").find("[id^='courseprogtab']").hide(); // Hide all content
+        $('#' +$(this).find("#current").children('a').attr('name')).fadeIn();
+
+    }
+
+
+    $('#courseprog-tabs a').click(function (e) {
+
+        // alert("clicked reseqarch front");
+        e.preventDefault();
+
+        if ($(this).closest("li").attr("id") == "current") { //detection for current tab
+            return;
+        }
+        else {
+            $("#courseprog-content").find("[id^='courseprogtab']").hide(); // Hide all content
+            $("#courseprog-tabs li").attr("id", ""); //Reset id's
+
+            $(this).parent().attr("id", "current"); // Activate this
+
+
+            $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
+        }
+    });
+
+
+
+});
+
+
+
+function isIntegeronly(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+
+    return true;
+}
+function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode ===46)
+    {
+        return true;
+    }
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+
+    return true;
+}
+function isNumberOnly(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+
+    return true;
+}
+function isAlphabit(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+    {
+        return true
+    }
+    if (charCode ===32)
+    {
+        return true;
+    }
+
+    return false;
+}
+
+function isAlphabitgrade(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+
+    if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))
+    {
+        return true
+    }
+    if ((charCode ===43 ))
+    {
+        return true;
+    }
+
+    return false;
+}
+
+function isAlphaNumeric(evt) {
+
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+
+    var regex = /^[A-Za-z0-9]+$/;
+    var isValid = regex.test(String.fromCharCode(charCode));
+    if (!isValid) {
+        return false;
+    }
+    return true;
+}
+

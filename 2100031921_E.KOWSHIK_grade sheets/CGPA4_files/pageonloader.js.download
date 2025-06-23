@@ -1,0 +1,49 @@
+$(document).ready(function(){
+
+    //When clicking on a button, it shows the loader
+
+    $('.btnloader').on('click', function(){
+        setTimeout(function(){
+        $('#loader').show();
+        }, 30);
+
+    });
+
+});
+
+$(document).ajaxStart(function(){
+
+    $('#loader').show();
+}).ajaxStop(function(){
+    $('#loader').hide();
+});
+
+
+
+$(document).ready(function(){
+    $(".kv-sidenav li a").click(function(){
+
+        $('#loader').show();
+
+
+        setTimeout(function(){
+            $('#loader').hide();
+        }, 300);
+    })
+});
+
+
+
+$(document).ready(function(){
+    $(".navbar-nav li a").click(function(){
+
+        $('#loader').show();
+
+
+        setTimeout(function(){
+            $('#loader').hide();
+        }, 300);
+    })
+});
+
+

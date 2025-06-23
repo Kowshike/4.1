@@ -1,0 +1,179 @@
+
+.slidertable {
+    width:100%;
+    color:#000000;
+    border:1px solid #000000;
+    padding:5px;
+}    
+.slidertable th,td{
+    padding:2px;
+    color:black;
+}
+ .container1 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height:750px ! important;
+     z-index:999;
+}  
+.container1 .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+   width: 500%;
+    height: 740px ! important;
+  /*animation: animate 40s linear infinite;*/
+}
+
+.container1 .slider .slide {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+
+.container1 .slider .slide .caption {
+  position: absolute;
+  bottom: 10px;
+    right: 10px;
+    left: 10px;
+    top:10px;
+  padding: 30px;
+  background-color:#efefef;
+  box-sizing: border-box;
+  transition: 0.5s;
+  z-index:9999;
+  overflow-x:auto;
+}
+
+.container1 .slider .slide .caption h2 {
+  margin: 0;
+  padding: 0;
+  margin-bottom:10px;
+  color:#a51c24;
+  font-size: 48px;
+  border-bottom: 1px solid white;
+  transition: 0.5s;
+}
+
+div#slideshow:hover {
+
+    animation-play-state:paused;
+}
+
+
+
+.container1 .slider .slide .caption p {
+  margin: 0;
+  padding: 0;
+  color:#000000;
+  font-size: 18px;
+  transition: 0.5s;
+} 
+
+.container1 .slider .slide.slide1 {
+  /*background: url(https://solarsystem.nasa.gov/system/resources/detail_files/17820_PIA21904-full.jpg);
+  background-size: cover;
+  background-position: center;*/
+
+    background-color:#3a454b;
+}
+
+.container1 .slider .slide.slide2 {
+  /*background: url(https://solarsystem.nasa.gov/system/resources/detail_files/17848_PIA12797-full.jpg);
+  background-size: cover;
+  background-position: center;*/
+    background-color:#3a454b;
+
+}
+
+.container1 .slider .slide.slide3 {
+  /*background: url(https://solarsystem.nasa.gov/system/resources/detail_files/17845_PIA12567-800w.jpg);
+  background-size: cover;
+  background-position: center;*/
+    background-color:#3a454b;
+
+}
+
+.container1 .slider .slide.slide4 {
+  /*background: url(https://solarsystem.nasa.gov/system/resources/detail_files/208_TitanHaze1000w.jpg);
+  background-size: cover;
+  background-position: center;*/
+
+  /* background-color:rgb(60,88,122); */
+    background-color:#3a454b;
+}
+
+.container1 .slider .slide.slide5 {
+  /*background: url(https://solarsystem.nasa.gov/system/resources/detail_files/17830_PIA18323-full.jpg);
+  background-size: cover;
+  background-position: center;*/
+    background-color:#3a454b;
+
+}
+
+@media screen and (max-width: 768px) {
+  .container1 .slider .slide .caption {
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    top:20px;
+    padding: 20px;
+  }
+
+  .container1 .slider .slide .caption h2 {
+    margin: 0 0 10px;
+    font-size: 30px;
+  }
+
+  .container1 .slider .slide .caption p {
+    font-size: 16px;
+  }
+}
+
+/*figureicon css code*/
+
+.figureicon {
+    background-image:url('../images/iconbg.jpg');
+    background-position: center;
+    /* background-image: linear-gradient(to right,rgba(51, 153, 255,0), rgba(51, 153, 255,1));*/
+    /*background:#3399ff;*/
+    color: #fff;
+    height:100px;
+    width:100px;
+    text-align:center;
+    font-size:45px;
+    margin-left:auto;
+    margin-right:auto;
+    cursor:pointer;
+    border-radius:50%;
+
+
+}
+.figureicon:hover{
+    -webkit-transform: rotateZ(720deg);
+    -moz-transform: rotateZ(720deg);
+    transform: rotateZ(720deg);
+    background-image:url('../images/nn1.jpg');
+    background-position: center;
+    box-shadow: 0 20px 30px 0 rgba(0,0,0,0.25);
+}
+
+.figureicon .fa{
+    margin-top:25px ! important;
+
+    margin: 3px 20px;
+    -webkit-transition: 0.6s ease-out;
+    -moz-transition:  0.6s ease-out;
+    transition:  0.6s ease-out;
+}
+
+.fa:hover{
+    -webkit-transform: rotateZ(720deg);
+    -moz-transform: rotateZ(720deg);
+    transform: rotateZ(720deg);
+}
+.figurerall{
+
+    display:inline-block;
+}

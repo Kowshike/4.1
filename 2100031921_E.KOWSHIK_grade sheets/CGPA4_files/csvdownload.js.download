@@ -1,0 +1,87 @@
+$(document).on('click','.downloadcsvh',function(e) {
+
+
+    "use strict";
+    var tflag=true;
+    var filename=$('#downloadfilename').val();
+
+    var childval=0;
+    var subUrl=$(".downloadcsvh").attr('url');
+
+    var sendData=[];
+    if(subUrl===''){
+        alert('No Url Defined');
+        return false;
+    }
+
+
+
+    var elements=($(".searchelement"));
+
+    $.each(elements,function(index,element){
+
+        childval=$(element).val();
+
+
+        if(!$(element).val())
+        {
+            tflag=false;
+        }
+        else
+        {
+            var object = {};
+            object[$(element).attr('id')] = childval;
+
+            sendData.push(object);
+
+            if(filename==='')
+                filename = childval ;
+            else
+                filename=filename+ '_' + childval ;
+            if(filename.length>20){
+                filename=filename.slice(0,20);
+            }
+        }
+    });
+    if(!tflag)
+    {
+        alert('All Elements should be selected');
+        return false;
+
+    }
+
+
+    filename=filename+ '.csv';
+
+
+
+    $.ajax({
+        url: subUrl,
+        dataType: 'text',
+        type: 'post',
+        contentType: 'application/x-www-form-urlencoded',
+        data:{ sendData},
+        success: function( data, textStatus, jQxhr ){
+
+            // The actual download
+            var blob = new Blob([data], { type: 'octet/stream' });
+            var link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.download = filename;
+
+            document.body.appendChild(link);
+
+            link.click();
+
+            document.body.removeChild(link);
+
+        },
+        error: function( jqXhr, textStatus, errorThrown ){
+
+            alert( errorThrown );
+        }
+    });
+
+
+
+});
